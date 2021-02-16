@@ -54,7 +54,8 @@ class slStack {
         return false;
     }
 
-    length() {
+    getLength() {
+        console.log(this.length);
         return this.length;
     }
 
@@ -79,4 +80,4 @@ myStack.peek();
 myStack.pop();
 myStack.peek();
 myStack.isEmpty();
-myStack.length();
+myStack.getLength();
