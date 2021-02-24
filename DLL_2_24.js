@@ -33,13 +33,6 @@ class DLList {
         return false;
     }
 
-    //List stores head and tail
-    //runner is a just a pointer that looks at position on the list
-
-    //          H  T
-    //          1234
-    //runner    X
-
     removeVal(val) {
         var runner = this.head;
 
