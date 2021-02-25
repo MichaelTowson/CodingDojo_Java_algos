@@ -20,19 +20,16 @@ class DLList {
     // reverse a doubly linked list
 
     reverse() {
-        var runner = this.head;
-        var temp = this.head.next;
-        while(runner.next) {
-            runner.next = runner.prev
-            runner.prev = temp
-            runner = runner.prev
-            temp = runner.next
+        var runner = this.tail;;
+        while(runner) {
+            var temp = runner.next
+            runner.next = runner.prev;
+            runner.prev = temp;
+            runner = runner.next;
         }
-        var tempHead = this.head;
-        runner.next = runner.prev;
-        runner.prev = null;
-        this.head = this.tail;
-        this.tail = tempHead;
+        temp = this.tail;
+        this.tail = this.head;
+        this.head = temp;
         return
     }
 
