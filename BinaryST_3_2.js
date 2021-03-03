@@ -7,7 +7,7 @@ class BSTNode {
         this.left = null;
         this.right = null;
     }
-};
+}
 
 class BST {
     constructor() {
@@ -16,7 +16,7 @@ class BST {
 
     isEmpty() {
         return this.root === null;
-    };
+    }
 
     // return true or false if val exists within the current tree
     // if current is undefined, current = this.root
@@ -49,13 +49,13 @@ class BST {
         // default current to root if no current exists
         if (current === undefined) {
             current = this.root;
-        };
+        }
 
         // if empty tree, new node becomes root
         if (current === null) {
             this.root = node;
             return;
-        };
+        }
 
         if (current.val > node.val) { // go left
             // check if null and insert
@@ -76,7 +76,7 @@ class BST {
                 return this.insert(node, current.right);
             }
         }
-    };
+    }
 
     // recursive
     getLargestFromSubtree(current) {
@@ -114,7 +114,7 @@ class BST {
         // when the while ends, return runner.val
         return runner.val;
     }
-};
+}
 
 // Recursion is:
 // - function that calls itself

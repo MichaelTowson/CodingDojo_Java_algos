@@ -72,9 +72,29 @@ class BST {
     // Levelorder (BFS - Breath first search)
     // Row-by-row left-right top-down
     // 24, 15, 50, 10, 22, 35, 70, 4, 12, 18, 24, 31, 44, 66, 90
-    printLevelorder(current) {
-        
-    }
+    pprintLevelorder(current) {
+        if (current === undefined) {
+            current = this.root;
+        };
+
+        var queue = []; // "queue"
+
+        if (current) {
+            queue.push(current);
+        }
+
+        while (queue.length > 0) {
+            var dequeuedNode = queue.shift(); // should probably import our actual queue
+            console.log(dequeuedNode.val);
+
+            if (dequeuedNode.left) {
+                queue.push(dequeuedNode.left);
+            }
+
+            if (dequeuedNode.right) {
+                queue.push(dequeuedNode.right);
+            }
+        }
 
     find(val, current) {
         if (current === undefined) {
